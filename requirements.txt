@@ -1,4 +1,4 @@
 Flask
 requests
-json
 requests_oauthlib
+twython

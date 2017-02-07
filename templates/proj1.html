@@ -1,17 +1,24 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Random Number</title>
+        <title>Project 1</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'css/proj1.css')}}">
     </head>
     <body>
        
+        <div id = "background_container" align = center style = "background-image: url({{background}}); height: 100%;">
+           
+            
+            <div class = "text_container">
+                <p align=center> <h1><font face = "Comic Sans MS" color = "red">Random "In Space..." Quotes</font></h1></p><br>
+                <p align=center><font face = "Comic Sans MS" color = "red" size = "4"><b>{{quote}}</b></font></p><br>
+                <p align=center><font face = "Comic Sans MS" color = "red" size = "3"><b>{{author}}</b></font></p><br>
+                <p align=center><font face = "Comic Sans MS" color = "red" size = "3"><b><a href="{{link}}">Link to tweet</a></b></font></p>
+                
+            </div>
+            
+        </div>
         
-        {% if num %}
-         <div align = center><h1>Random Numbers</h1></div>
-           <div align = center> <h3>{{num}}</h3></div>
-        {% else %}
-           <div align = center> <h1>No number to post</h1></div>
-        {% endif %}
             
     </body>
 </html>
