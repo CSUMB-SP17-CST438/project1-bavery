@@ -26,7 +26,7 @@ def index():
     json_body = getty_response.json()
 
     
-    background_url = json_body["images"][randImg]["display_sizes"][0]["uri"]
+    background_url = json_body['images'][randImg]['display_sizes'][0]['uri']
 
     twit= Twython(
        app_key=os.environ['app_key'],
