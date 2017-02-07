@@ -12,7 +12,7 @@ app = flask.Flask(__name__)
 @app.route('/')
 def index():
     
-    randImg = randint(0,30)
+    randImg = randint(0,29)
     randTweet = randint(0,75)
   
     getty_url = \
