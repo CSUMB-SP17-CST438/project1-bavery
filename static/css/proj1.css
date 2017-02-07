@@ -1,0 +1,32 @@
+html, body {
+    height: 100%;
+    background: black;
+}
+
+#background_container {
+    
+      border-radius: 25px;
+      border: 2px solid red;
+      background-color: white;
+      padding: 20px; 
+      margin: 50px auto;
+      background-repeat: no-repeat;
+      width: 80%;
+      height: 90%;
+      background-size: contain;
+      background-position: center;
+}
+
+text_container {
+      border-radius: 25px;
+      margin: 0 auto;
+      width: 75%;
+      height: auto;
+      top: 50%;
+      transform: translateY(-50%);
+      position: relative;
+      text-align: center;
+      padding: 100px;
+      
+      
+}
