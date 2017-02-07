@@ -18,18 +18,21 @@ def index():
     getty_url = \
     "https://api.gettyimages.com/v3/search/images?fields=comp,id,title,thumb,referral_destinations&sort_order=best&phrase=space"
 
+    my_headers = {
+            "Api-Key": os.environ['Api-Key']
+    }
 
-    getty_response = requests.get(getty_url, headers=os.environ['my_headers'])
+    getty_response = requests.get(getty_url, headers=my_headers)
     json_body = getty_response.json()
 
     
     background_url = json_body["images"][randImg]["display_sizes"][0]["uri"]
 
     twit= Twython(
-       os.environ['app_key'],
-       os.environ['app_secret'],
-       os.environ['oauth_token'],
-       os.environ['oauth_token_secret'])
+       app_key=os.environ['app_key'],
+       app_secret=os.environ['app_secret'],
+       oauth_token=os.environ['oauth_token'],
+       oauth_token_secret=os.environ['oauth_token_secret'])
        
     tweets = twit.search(q= 'In space, no one can', count = 150)
     quotes = tweets['statuses']
@@ -42,7 +45,7 @@ def index():
             content = quote['text']
             author = "@" + quote['user']['screen_name']
             Id = quote['id_str']
-            link = "http://www.twitter.com/" + quote['user']['screen_name'] + "/status/" + Id
+            link = "httptwitter.com/" + quote['user']['screen_name'] + "/status/" + Id
         count = count + 1
     
     
