@@ -45,7 +45,7 @@ def index():
             content = quote['text']
             author = "@" + quote['user']['screen_name']
             Id = quote['id_str']
-            link = "httptwitter.com/" + quote['user']['screen_name'] + "/status/" + Id
+            link = "http://www.twitter.com/" + quote['user']['screen_name'] + "/status/" + Id
         count = count + 1
     
     
